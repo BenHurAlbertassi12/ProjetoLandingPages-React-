@@ -1,12 +1,61 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from './templates/App/App.jsx';
-import { GlobalStyles } from './styles/GlobalStyles.js';
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import { theme } from './styles/theme';
+
+import styled, { css } from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles';
+
+const changeBackground = (theme, bg) => css`
+  background: ${bg};
+  color: #000;
+`;
+
+const Heading = styled.h1`
+  color: purple;
+`;
+
+export const Container = styled.div`
+  background: ${({ theme }) => theme.colors.primaryColor};
+  ${({ theme, bg }) => css`
+    color: ${theme.colors.white};
+    ${changeBackground(theme, bg)}
+  `}
+`;
+
+export const Container2 = styled(Container).attrs({ as: 'article' })`
+  background: blue;
+  /* article > h1 */
+  > ${Heading} {
+    color: yellow;
+  }
+  /* article.h1 */
+  ${Heading}:hover {
+    color: brown;
+  }
+  /* article:hover */
+  &:hover {
+    background: pink;
+  }
+  /* article:hover */
+  &::after {
+    content: '----';
+  }
+`;
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <GlobalStyles />
+    <ThemeProvider theme={theme}>
+      <Container bg="red">
+        <Heading>OI</Heading>
+      </Container>
+      <Container2 bg="red">
+        <Heading>OI</Heading>
+      </Container2>
+      <Heading>OI</Heading>
+      <GlobalStyles />
+    </ThemeProvider>
   </React.StrictMode>,
+  document.getElementById('root'),
 );
