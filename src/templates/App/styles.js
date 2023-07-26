@@ -1,9 +1,4 @@
 /* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div`
-${(props) => css`
-background: ${props.background}
-
-`}
-`;
+export const Wrapper = styled.div``;

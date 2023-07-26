@@ -1,16 +1,14 @@
-/* eslint-disable no-unused-vars */
-import * as Styles from './styles';
+import { Heading } from '../../Components/Header';
+import * as Styled from './styles';
 
-import React from 'react';
-
-export const App = () => {
+function App() {
   return (
-    <div>
-      <Styles.Wrapper background="blue">
-        <h1>
-          <h1>Ola</h1>
-        </h1>
-      </Styles.Wrapper>
+    <div className="App">
+      <Styled.Wrapper>
+        <Heading>O texto que eu quero</Heading>
+      </Styled.Wrapper>
     </div>
   );
-};
+}
+
+export default App;
