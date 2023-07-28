@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.p`
   ${({ theme }) => css``}
 `;
