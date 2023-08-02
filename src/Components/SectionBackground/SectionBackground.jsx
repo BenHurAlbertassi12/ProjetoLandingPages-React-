@@ -1,15 +1,16 @@
-/* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import * as Styled from './styles';
+import { SectionContainer } from '../SectionContainer/SectionContainer';
 
-export const SectionBackground = ({ children }) => {
+export const SectionBackground = ({ children, background = false }) => {
   return (
-    <Styled.Container>
-      <h1>{children}</h1>
+    <Styled.Container background={background}>
+      <SectionContainer>{children}</SectionContainer>
     </Styled.Container>
   );
 };
 
 SectionBackground.propTypes = {
   children: P.node.isRequired,
+  background: P.bool,
 };
