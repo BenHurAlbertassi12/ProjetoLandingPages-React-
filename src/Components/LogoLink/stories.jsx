@@ -1,21 +1,33 @@
 /* eslint-disable no-unused-vars */
-import { LogoLink } from '.';
+
+import { LogoLink } from './LogoLink';
 
 export default {
   title: 'LogoLink',
   component: LogoLink,
   args: {
-    children: 'LogoLink',
-  },
-  argTypes: {
-    children: { type: 'string' },
+    text: 'LogoLink',
+    srcIMG: 'assets/images/logo.svg',
+    link: 'http://localhost:',
   },
 };
 
-export const Template = (args) => {
+export const ImageOnly = (args) => {
   return (
     <div>
       <LogoLink {...args} />
     </div>
   );
+};
+
+export const TextOnly = (args) => {
+  return (
+    <div>
+      <LogoLink {...args} />
+    </div>
+  );
+};
+
+TextOnly.args = {
+  srcIMG: '',
 };
