@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import * as Styled from './styles';
+import { Heading } from '../Header/Header';
 
 export const LogoLink = ({ children }) => {
   return (
-    <Styled.Container>
-      <h1>{children}</h1>
-    </Styled.Container>
+    <Heading>
+      <Styled.Container></Styled.Container>
+    </Heading>
   );
 };
 
