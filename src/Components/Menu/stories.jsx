@@ -1,12 +1,12 @@
 import { Menu } from '.';
 
-import linksMock from '../NavLinks/mock';
+// import linksMock from '../NavLinks/mock';
 
 export default {
   title: 'Menu',
   component: Menu,
   args: {
-    links: linksMock,
+    // links: linksMock,
     logoData: {
       text: 'Logo',
       link: '#target',

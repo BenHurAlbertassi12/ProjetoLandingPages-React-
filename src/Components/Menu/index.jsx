@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import P from 'prop-types';
 import * as Styled from './styles';
 import { SectionContainer } from '../SectionContainer';
 import { LogoLink } from '../LogoLink';
-import { NavLinks } from '../NavLinks';
+// import { NavLinks } from '../NavLinks';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
 import { useState } from 'react';
@@ -27,7 +28,7 @@ export const Menu = ({ links = [], logoData }) => {
         <SectionContainer>
           <Styled.MenuContainer>
             <LogoLink {...logoData} />
-            <NavLinks links={links} />
+            {/* <NavLinks links={links} /> */}
           </Styled.MenuContainer>
         </SectionContainer>
       </Styled.Container>
@@ -36,6 +37,6 @@ export const Menu = ({ links = [], logoData }) => {
 };
 
 Menu.propTypes = {
-  ...NavLinks.propTypes,
+  // ...NavLinks.propTypes,
   logoData: P.shape(LogoLink.propTypes).isRequired,
 };
