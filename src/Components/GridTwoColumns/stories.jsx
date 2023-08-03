@@ -1,4 +1,4 @@
-import { GridTwoColumns } from './index';
+import { GridTwoColumns } from '.';
 
 import mock from './mock';
 

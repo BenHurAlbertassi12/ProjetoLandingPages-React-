@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { SectionBackground } from './index';
+import { SectionBackground } from '.';
 import { SectionContainer } from '../SectionContainer';
 
 export default {

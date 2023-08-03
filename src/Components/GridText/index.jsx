@@ -1,8 +1,8 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { SectionBackground } from '../SectionBackground/index';
-import { Heading } from '../Heading/index';
-import { TextComponent } from '../TextComponent/index';
+import { SectionBackground } from '../SectionBackground';
+import { Heading } from '../Heading';
+import { TextComponent } from '../TextComponent';
 
 export const GridText = ({
   title,

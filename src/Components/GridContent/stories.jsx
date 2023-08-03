@@ -1,4 +1,4 @@
-import { GridContent } from './index';
+import { GridContent } from '.';
 
 import mock from './mock';
 

@@ -1,6 +1,6 @@
-// import { screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
-import { GridContent } from './index';
+import { GridContent } from '.';
 
 import mock from './mock';
 

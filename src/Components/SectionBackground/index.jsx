@@ -1,5 +1,5 @@
 import P from 'prop-types';
-import { SectionContainer } from '../SectionContainer/index';
+import { SectionContainer } from '../SectionContainer';
 import * as Styled from './styles';
 
 export const SectionBackground = ({

@@ -1,8 +1,8 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { SectionContainer } from '../SectionContainer/index';
-import { LogoLink } from '../LogoLink/index';
-import { NavLinks } from '../NavLinks/index';
+import { SectionContainer } from '../SectionContainer';
+import { LogoLink } from '../LogoLink';
+import { NavLinks } from '../NavLinks';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
 import { useState } from 'react';

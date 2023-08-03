@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { Heading } from '.';
