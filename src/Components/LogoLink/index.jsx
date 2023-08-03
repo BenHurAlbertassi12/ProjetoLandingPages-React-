@@ -1,14 +1,15 @@
 /* eslint-disable no-unused-vars */
 import P from 'prop-types';
 import * as Styled from './styles';
-import { Heading } from '../Header/Header';
+import { Heading } from '../Heading/index';
+import { Link } from 'react-router-dom';
 
-export const LogoLink = ({ text, srcIMG = '', link }) => {
+export const LogoLink = ({ text, srcImg = '', link }) => {
   return (
-    <Heading uppercase size="small">
+    <Heading size="small" uppercase>
       <Styled.Container href={link}>
-        {!!srcIMG && <img src={srcIMG} alt={text} />}
-        {!srcIMG && text}
+        {!!srcImg && <img src={srcImg} alt={text} />}
+        {!srcImg && text}
       </Styled.Container>
     </Heading>
   );
@@ -16,6 +17,6 @@ export const LogoLink = ({ text, srcIMG = '', link }) => {
 
 LogoLink.propTypes = {
   text: P.string.isRequired,
-  srcIMG: P.string,
+  srcImg: P.string,
   link: P.string.isRequired,
 };

@@ -1,5 +1,5 @@
 import P from 'prop-types';
-import * as Styled from './HeaderStyles';
+import * as Styled from './styles';
 
 export const Heading = ({
   children,
